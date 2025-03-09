@@ -1,0 +1,142 @@
+/* 🌙 Dark Mode Styling */
+.experiences {
+  background-color: #121212;
+  color: #EAEAEA;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ul {
+  list-style: none; /* Supprime les puces */
+  padding: 0;
+  margin: 0;
+}
+
+.no-bullet {
+  display: block; /* Permet au texte de bien s'afficher */
+  padding-left: 10px; /* Légère indentation pour bien aligner */
+}
+
+/* 🏆 Titre */
+.experiences-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #23C2DE;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* 📌 Conteneur principal */
+.experiences-navigation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* 🏢 Carte d'expérience */
+.experiences-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experiences-format {
+  width: 100%;
+  max-width: 500px;
+  min-height: 350px;
+  padding: 40px;
+  border-radius: 10px;
+  border: 2px solid #23C2DE;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px rgba(35, 194, 222, 0.3);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.experiences-format:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(35, 194, 222, 0.6);
+}
+
+/* 🏢 Logo de l'entreprise */
+.company-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(35, 194, 222, 0.5);
+}
+
+.company-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 📌 Navigation */
+.nav-button {
+  border: none;
+  background: none;
+  color: #23C2DE;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 15px;
+  transition: color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  color: #00A3D9;
+  transform: scale(1.2);
+}
+
+.nav-button:disabled {
+  color: #444;
+  cursor: not-allowed;
+}
+
+/* 🔗 GitHub */
+.github-icon {
+  margin-top: 15px;
+}
+
+.github-icon img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.github-icon a:hover img {
+  transform: scale(1.2);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .experiences-format {
+      width: 100%;
+      padding: 20px;
+      min-height: 300px;
+  }
+
+  .experiences-title h1 {
+      font-size: 40px;
+  }
+
+  .nav-button {
+      font-size: 24px;
+      padding: 10px;
+  }
+}

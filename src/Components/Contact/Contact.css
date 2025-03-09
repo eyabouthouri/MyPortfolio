@@ -1,0 +1,133 @@
+/* 🌙 Dark Mode Styling */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #121212;
+    color: #EAEAEA;
+}
+
+/* 🏆 Titre */
+.contact-title h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #23C2DE;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* 📌 Section principale */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(35, 194, 222, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* 🏠 Partie gauche */
+.contact-left {
+    flex: 1;
+    max-width: 400px;
+}
+
+.contact-left h1 {
+    font-size: 1.8rem;
+    color: #23C2DE;
+}
+
+.contact-left p {
+    font-size: 1rem;
+    color: #BDBDBD;
+}
+
+/* 📌 Détails de contact */
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    padding: 8px 0;
+}
+
+.contact-detail-icon {
+    font-size: 1.2rem;
+    color: #23C2DE;
+}
+
+/* 📜 Formulaire */
+.contact-right {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-right label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #EAEAEA;
+}
+
+.contact-right input, .contact-right textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #23C2DE;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #EAEAEA;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-right input:focus, .contact-right textarea:focus {
+    border-color: #1A90B8;
+    box-shadow: 0 0 10px rgba(35, 194, 222, 0.5);
+}
+
+/* 🎯 Bouton */
+.contact-submit {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background: linear-gradient(267deg, #23c2de 0.36%, #23C2DE99);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(35, 194, 222, 0.6);
+}
+
+/* 📩 Message de confirmation */
+.form-status {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.success {
+    color: #23C2DE;
+}
+
+.error {
+    color: #E74C3C;
+}

@@ -1,0 +1,142 @@
+/* Supprime l'espace entre la navbar et la section Hero */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #121212; /* Fond sombre */
+    color: #EAEAEA; /* Texte clair */
+}
+/* Supprime l’espace vide en haut de la section Hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0; /* Enlève les marges */
+    margin: 0;
+    width: 100%;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    
+}
+
+/* Agrandir l'image et la placer à gauche */
+.hero-image {
+    flex: 0 0 250px; /* Taille fixe pour l'image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-image img {
+    width: 250px; /* Augmenté pour être plus grand */
+    height: 250px; /* Taille proportionnelle */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px  rgba(35, 194, 222, 0.6);
+}
+
+/* Aligner le texte */
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 45px;
+    font-weight: 600;
+    margin: 0; /* Élimine l’espace en haut */
+}
+
+
+.hero h1 span {
+    background: linear-gradient(270deg, #23c2de 10%, #23C2DE99 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 40px;
+    max-width: 600px;
+    margin: 0; /* Élimine l’espace autour */
+}
+
+/* Ajustement des boutons */
+.hero-action {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 20px; /* Laisse un peu d'espace après le texte */
+}
+
+.hero-connect, .hero-resume {
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-connect {
+    border: 2px solid #FFF;
+
+    color: white;
+}
+
+.hero-connect:hover {
+    border-color: #23C2DE99;
+    background: linear-gradient(267deg, #23c2de 0.36%, #23C2DE99);
+}
+
+.hero-resume {
+    border: 2px solid #FFF;
+    color: white;
+}
+
+.hero-resume-link {
+    text-decoration: none;
+    color: white;
+}
+
+.hero-resume:hover {
+    border-color: #23C2DE99;
+    background: linear-gradient(267deg, #23c2de 0.36%, #23C2DE99);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-bottom: 20px;
+    }
+
+    .hero-image img {
+        width: 180px; /* Plus petit sur mobile */
+        height: 180px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        line-height: 32px;
+    }
+}

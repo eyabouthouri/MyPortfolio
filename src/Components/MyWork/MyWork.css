@@ -1,0 +1,143 @@
+/* 🌙 Dark Mode Styling */
+.mywork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #121212;
+  color: #EAEAEA;
+}
+
+/* 🏆 Titre */
+.mywork-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #23C2DE;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* 📌 Conteneur principal */
+.mywork-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* 🏗️ Cartes de projet */
+.work-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #23C2DE;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(35, 194, 222, 0.2);
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(35, 194, 222, 0.5);
+}
+
+/* 🖼️ Image */
+.work-image-container {
+  width: 100%;
+  height: auto;
+}
+
+.work-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 📝 Détails */
+.work-details {
+  padding: 15px;
+}
+
+.work-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #EAEAEA;
+}
+
+.work-description {
+  font-size: 1rem;
+  color: #BDBDBD;
+  margin-top: 10px;
+}
+
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.work-tag {
+  font-size: 0.9rem;
+  color: white;
+  background: #23C2DE;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.work-tag:hover {
+  background: #1A90B8;
+}
+
+/* 🔄 Pagination */
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.nav-button {
+  border: none;
+  background: none;
+  color: #23C2DE;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  color: #1A90B8;
+  transform: scale(1.2);
+}
+
+.nav-button:disabled {
+  color: #444;
+  cursor: not-allowed;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .mywork-title h1 {
+      font-size: 2rem;
+  }
+
+  .work-card {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .pagination-buttons {
+      gap: 15px;
+  }
+
+  .nav-button {
+      font-size: 20px;
+  }
+}

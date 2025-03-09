@@ -1,0 +1,117 @@
+/* Style de la navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #121212;
+    color: #EAEAEA;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%; /* Réduit la largeur à 80% de l'écran */
+    max-width: 1300px; /* Empêche qu'elle soit trop large */
+    margin: 0 auto; /* Centre la navbar */
+}
+
+/* Menu principal */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    list-style: none;
+}
+.anchor-link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .anchor-link:hover,
+  .anchor-link.active {
+    color: #f39c12; /* Couleur différente pour l'actif */
+  }
+  #about {
+    scroll-margin-top: 80px; /* Ajuste selon la hauteur de ta navbar */
+  }
+  
+  
+  #about.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+.nav-menu li a {
+    text-decoration: none;
+    color: #EAEAEA;
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu li a:hover {
+    color: #23C2DE;
+}
+
+/* Bouton Connect */
+.nav-connect {
+    padding: 10px 20px;
+    background: linear-gradient(267deg, #23C2DE 0.36%, #102193);
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(35, 194, 222, 0.6);
+}
+
+/* Mobile menu */
+.nav-mob-open,
+.nav-mob-close {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -950px;
+        width: 250px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1001;
+    }
+
+    .nav-mob-open {
+        display: block;
+    }
+
+    .nav-mob-close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+    }
+
+    .nav-menu li a {
+        font-size: 20px;
+    }
+}

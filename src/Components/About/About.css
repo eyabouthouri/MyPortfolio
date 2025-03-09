@@ -1,0 +1,113 @@
+/* 🌙 Dark Mode Styling */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #121212; /* Fond sombre */
+  color: #EAEAEA; /* Texte clair */
+}
+
+/* 🏆 Titre principal */
+.about-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #23c2de; /* Bleu cyan pour un effet moderne */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* 📜 Texte principal */
+.about-text {
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  background: rgba(255, 255, 255, 0.05); /* Légère transparence pour un effet moderne */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* ⚡ Section des compétences */
+.skills-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  color: #23c2de; /* Texte en bleu cyan */
+  margin-bottom: 20px;
+}
+
+/* 🛠️ Cartes des compétences */
+.tech-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #EAEAEA;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 15px rgba(35, 194, 222, 0.6);
+}
+
+/* 🔵 Icônes des compétences */
+.tech-icon {
+  font-size: 1.5rem;
+  color: #23c2de;
+}
+
+/* 🌟 Effets d'animation */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .about-title h1 {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .skills-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .tech-card {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .tech-icon {
+    font-size: 1.2rem;
+  }
+}
