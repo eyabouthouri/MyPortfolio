@@ -9,10 +9,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 200%; /* Réduit la largeur à 80% de l'écran */
-    max-width: 1300px; /* Empêche qu'elle soit trop large */
-    margin: 0 auto; /* Centre la navbar */
+    width: 100%; /* Correction : width à 100% */
+    max-width: 1400px;
+    margin: 0 auto;
+    z-index: 1000; /* Ajout d'un z-index élevé */
 }
+
 
 /* Menu principal */
 .nav-menu {
