@@ -32,12 +32,12 @@ const Hero = () => {
 
             </div>
             <div className="hero-resume">
-              <a href="/ResumeEya.pdf" download="ResumeEya.pdf" className="hero-resume-link">
+              <a href="https://raw.githubusercontent.com/eyabouthouri/MyPortfolio/main/public/ResumeEya.pdf" download="ResumeEya.pdf" className="hero-resume-link">
                 My English Resume
               </a>
             </div>
             <div className="hero-resume">
-              <a href="/CVEyaBouthouri.pdf" download="CVEyaBouthouri.pdf" className="hero-resume-link">
+              <a href="https://raw.githubusercontent.com/eyabouthouri/MyPortfolio/main/public/CVEyaBouthouri.pdf" download="CVEyaBouthouri.pdf" className="hero-resume-link">
                 My French Resume
               </a>
             </div>
