@@ -1,0 +1,111 @@
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 20px;
+  color: var(--text);
+}
+
+.education-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+.education-timeline {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: min(1000px, 100%);
+}
+
+.education-card,
+.extra-card,
+.language-chip {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+}
+
+.education-card {
+  padding: 28px;
+  animation: cardPop 0.6s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px var(--accent-dim);
+}
+
+.education-years {
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.education-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+}
+
+.education-school,
+.education-details {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.education-details {
+  margin-top: 10px;
+}
+
+.education-extra {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  width: min(1000px, 100%);
+  margin-top: 40px;
+}
+
+.education-extra h2 {
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.language-list,
+.extra-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.language-chip {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 18px;
+}
+
+.extra-card {
+  padding: 16px 18px;
+}
+
+.extra-card h3 {
+  font-size: 1rem;
+}
+
+.extra-card p {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .education-title h1 {
+    font-size: 2rem;
+  }
+
+  .education-timeline,
+  .education-extra {
+    grid-template-columns: 1fr;
+  }
+}

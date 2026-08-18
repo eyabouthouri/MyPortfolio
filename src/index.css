@@ -1,0 +1,216 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root,
+[data-theme="dark"] {
+  --bg: #05080e;
+  --bg-elevated: #101820;
+  --text: #eef6f8;
+  --muted: #9fb0ba;
+  --accent: #23c2de;
+  --accent-2: #7c5cff;
+  --accent-dim: rgba(35, 194, 222, 0.55);
+  --accent-soft: rgba(35, 194, 222, 0.14);
+  --card: rgba(10, 16, 24, 0.48);
+  --card-border: rgba(35, 194, 222, 0.18);
+  --nav-bg: rgba(5, 8, 14, 0.62);
+  --menu-bg: rgba(5, 8, 14, 0.92);
+  --overlay: rgba(5, 8, 14, 0.72);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --orb-1: rgba(35, 194, 222, 0.16);
+  --orb-2: rgba(124, 92, 255, 0.16);
+  --shadow: rgba(0, 0, 0, 0.28);
+  --on-accent: #071018;
+  --mx: 50vw;
+  --my: 20vh;
+}
+
+[data-theme="light"] {
+  --bg: #f3f7fb;
+  --bg-elevated: #ffffff;
+  --text: #12202a;
+  --muted: #4d5d68;
+  --accent: #1496b0;
+  --accent-2: #5b4dff;
+  --accent-dim: rgba(20, 150, 176, 0.4);
+  --accent-soft: rgba(20, 150, 176, 0.12);
+  --card: rgba(255, 255, 255, 0.86);
+  --card-border: rgba(20, 150, 176, 0.24);
+  --nav-bg: rgba(243, 247, 251, 0.86);
+  --menu-bg: rgba(243, 247, 251, 0.98);
+  --overlay: rgba(18, 32, 42, 0.58);
+  --input-bg: #ffffff;
+  --orb-1: rgba(20, 150, 176, 0.16);
+  --orb-2: rgba(91, 77, 255, 0.1);
+  --shadow: rgba(18, 32, 42, 0.1);
+  --on-accent: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 12%, var(--orb-1), transparent 36%),
+    radial-gradient(circle at 82% 78%, var(--orb-2), transparent 40%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 380px;
+  height: 380px;
+  left: var(--mx);
+  top: var(--my);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--accent-soft), transparent 68%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#home,
+#about,
+#education,
+#experiences,
+#work,
+#contact {
+  scroll-margin-top: 92px;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}
+
+.hero,
+.about,
+.education,
+.experiences,
+.mywork,
+.contact,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+.about-text,
+.education-card,
+.experiences-format,
+.work-card,
+.contact-section,
+.highlight-card {
+  backdrop-filter: blur(18px);
+}
+
+.about-title h1,
+.education-title h1,
+.experiences-title h1,
+.mywork-title h1,
+.contact-title h1 {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent), #9be7f3, var(--accent-2), var(--accent));
+  background-size: 220% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 6s linear infinite;
+}
+
+.about-title h1::after,
+.education-title h1::after,
+.experiences-title h1::after,
+.mywork-title h1::after,
+.contact-title h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 72px;
+  height: 3px;
+  transform: translateX(-50%);
+  border-radius: 99px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: linePulse 2.4s ease-in-out infinite;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(36px) scale(0.98);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes cardPop {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 220% center;
+  }
+}
+
+@keyframes linePulse {
+  0%,
+  100% {
+    width: 56px;
+    opacity: 0.55;
+  }
+  50% {
+    width: 110px;
+    opacity: 1;
+  }
+}
+
+@keyframes gridShift {
+  to {
+    background-position: 42px 42px, 42px 42px, 0 0, 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
